@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rooms</title>
+  </head>
+  <body>
+    <h1>Rooms</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Room Number</th>
+          <th>Room Name</th>
+          <th>Bed Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="room : ${rooms}">
+          <td th:text="${room.roomNumber}">Number</td>
+          <td th:text="${room.roomName}">RoomName</td>
+          <td th:text="${room.bedInfo}">BedInfo</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
